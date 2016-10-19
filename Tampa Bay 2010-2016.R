@@ -184,7 +184,6 @@ meanFFPOffense <- function(gamedate) {
   return(mean(thisGame$FFP))
 }
 
-#testset[date %between% c("2013-08-02", "2013-11-01")]
 #Function that gets season from game date
 getSeason <- function(gamedate) {
   thisGame <- dteam[ dteam$Date == gamedate, ]
@@ -197,13 +196,13 @@ getSeason <- function(gamedate) {
   if(thisGame$Date %between% c("2012-10-01", "2013-07-01")) {
     return("2012-2013")
   }   
-  if(thisGame$Date%between% c("2013-10-01", "2014-07-01")) {
+  if(thisGame$Date %between% c("2013-10-01", "2014-07-01")) {
     return("2013-2014")
   }      
-  if(thisGame$Date%between% c("2014-10-01", "2015-07-01")) {
+  if(thisGame$Date %between% c("2014-10-01", "2015-07-01")) {
     return("2014-2015")
   }  
-  if(thisGame$Date%between% c("2015-10-01", "2016-07-01")) {
+  if(thisGame$Date %between% c("2015-10-01", "2016-07-01")) {
     return("2015-2016")
   }  
   return("Error")  
